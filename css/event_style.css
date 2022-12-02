@@ -1,0 +1,532 @@
+@charset "UTF-8";
+/*
+===============
+GOOGLE FONTS
+===============
+*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+/*
+===============
+VARIABLES CSS
+===============
+*/
+/*
+===============
+COLORS
+===============
+*/
+/*
+===============
+FONT AND SIZE
+===============
+*/
+/*
+===============
+FONT WEIGHT
+===============
+*/
+/*
+===============
+TRANSITION
+===============
+*/
+/*
+===============
+SPACING
+===============
+*/
+/*
+===============
+HOVER OVERLAY
+===============
+*/
+/*
+===============
+Responsive Desine
+===============
+*/
+.sp {
+  display: block !important;
+}
+
+.pc {
+  display: none !important;
+}
+
+@media only screen and (min-width: 767px) {
+  .sp {
+    display: none !important;
+  }
+  .pc {
+    display: block !important;
+  }
+}
+/*
+===============
+body
+===============
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  /* font-family: 'Poppins', sans-serif;
+  font-family: 'Zen Kaku Gothic New', sans-serif; */
+}
+
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* common */
+.big-title {
+  display: block;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 48px;
+  background-color: #1e588b;
+  background-image: url(../img/service/thirdimg-pc.png);
+  -webkit-background-clip: text;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: transparent;
+}
+@media screen and (min-width: 767px) {
+  .big-title {
+    font-size: 6.25rem;
+    font-weight: 700;
+    line-height: 90px;
+  }
+}
+
+.contents-text {
+  width: auto;
+  font-size: 0.75rem;
+  margin: 0 5px;
+}
+
+header {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: 10;
+}
+header .header-block {
+  display: flex;
+}
+header .header-block h1 {
+  margin-top: 24px;
+  margin-left: 9px;
+}
+@media screen and (min-width: 767px) {
+  header .header-block h1 {
+    margin-top: 20px;
+    margin-left: 44px;
+  }
+}
+header .header-block nav {
+  display: flex;
+  margin-left: auto;
+  margin-right: 9px;
+  /* ハンバーガーメニュー */
+}
+@media screen and (min-width: 767px) {
+  header .header-block nav {
+    margin-right: 49px;
+  }
+}
+header .header-block nav img {
+  width: 18px;
+  height: 18px;
+  margin-top: 60px;
+}
+header .header-block nav p {
+  margin-top: 33px;
+  margin-left: 12px;
+  margin-right: 87px;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #FFFFFF;
+}
+header .header-block nav p span {
+  display: block;
+  margin-top: 5px;
+  font-size: 1.5rem;
+}
+header .header-block nav .menu-btn {
+  margin-top: 31px;
+  width: 34.86px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 767px) {
+  header .header-block nav .menu-btn {
+    margin-top: 54px;
+    width: 60px;
+  }
+}
+header .header-block nav .menu-btn span {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 34.86px;
+  background-color: #FFFFFF;
+  position: absolute;
+}
+@media screen and (min-width: 767px) {
+  header .header-block nav .menu-btn span {
+    width: 60px;
+  }
+}
+header .header-block nav .menu-btn span:after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 29.05px;
+  background-color: #FFFFFF;
+  position: absolute;
+}
+@media screen and (min-width: 767px) {
+  header .header-block nav .menu-btn span:after {
+    width: 50px;
+  }
+}
+header .header-block nav .menu-btn span:after {
+  top: 10px;
+  right: 13.95px;
+}
+@media screen and (min-width: 767px) {
+  header .header-block nav .menu-btn span:after {
+    right: 20px;
+  }
+}
+
+/* mainvisual */
+.mainvisual-section {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  background-color: #023059;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 767px) {
+  .mainvisual-section {
+    padding-top: 50px;
+  }
+}
+.mainvisual-section .toptitle {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+@media screen and (min-width: 767px) {
+  .mainvisual-section .toptitle {
+    font-size: 6.25rem;
+    letter-spacing: 0;
+  }
+}
+.mainvisual-section .smalltitle {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+}
+@media screen and (min-width: 767px) {
+  .mainvisual-section .smalltitle {
+    font-size: 1.5rem;
+    letter-spacing: 0;
+  }
+}
+
+/* event */
+.section2 {
+  width: 100%;
+  margin-top: 45px;
+  padding: 0 22px;
+}
+@media screen and (min-width: 767px) {
+  .section2 {
+    margin-top: 45px;
+    padding: 0 70px;
+  }
+}
+.section2 .large-text {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 55px;
+  color: #121212;
+}
+.section2 .event-box {
+  margin-top: 42px;
+  display: flex;
+  flex-flow: column;
+}
+@media screen and (min-width: 767px) {
+  .section2 .event-box {
+    margin-top: 50px;
+    padding-right: 0;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    -moz-column-gap: 70px;
+         column-gap: 70px;
+    row-gap: 92px;
+  }
+}
+.section2 .event-box article {
+  padding-bottom: 50px;
+  text-align: center;
+}
+@media screen and (min-width: 767px) {
+  .section2 .event-box article {
+    padding-bottom: 0;
+  }
+}
+.section2 .event-box article img {
+  width: 100%;
+}
+.section2 .event-box article .event-date {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 20px;
+  margin-top: 15px;
+  text-align: left;
+}
+@media screen and (min-width: 767px) {
+  .section2 .event-box article .event-date {
+    margin-top: 15px;
+  }
+}
+.section2 .event-box article .event-title {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 20px;
+  margin-top: 5px;
+  text-align: left;
+}
+@media screen and (min-width: 767px) {
+  .section2 .event-box article .event-title {
+    font-size: 1rem;
+  }
+}
+.section2 .event-box article .event-text {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  margin-top: 15px;
+  text-align: left;
+  padding-right: 62px;
+}
+@media screen and (min-width: 767px) {
+  .section2 .event-box article .event-text {
+    font-size: 0.875rem;
+    padding-right: 0;
+  }
+}
+
+.contact-section {
+  margin-top: 30px;
+}
+@media screen and (min-width: 767px) {
+  .contact-section {
+    margin-top: 150px;
+  }
+}
+.contact-section .large-text {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 48px;
+  color: #121212;
+}
+.contact-section .contact-block {
+  width: 100%;
+  height: 160px;
+  margin: 0 auto;
+  margin-top: 15px;
+  text-align: center;
+  background-color: #023059;
+}
+@media screen and (min-width: 767px) {
+  .contact-section .contact-block {
+    width: 1000px;
+    height: 298px;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+  }
+}
+.contact-section .contact-block .contact-text {
+  display: inline-block;
+  text-align: left;
+  padding-top: 10px;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 25px;
+  color: #FFFFFF;
+}
+@media screen and (min-width: 767px) {
+  .contact-section .contact-block .contact-text {
+    padding-top: 70px;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}
+.contact-section .contact-block .contact-button {
+  margin: 0 auto;
+  margin-top: 16px;
+  width: 181px;
+  height: 30px;
+  background-color: #FFFFFF;
+}
+@media screen and (min-width: 767px) {
+  .contact-section .contact-block .contact-button {
+    margin-top: 60px;
+    width: 482px;
+    height: 71px;
+  }
+}
+.contact-section .contact-block .contact-button p {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 30px;
+}
+@media screen and (min-width: 767px) {
+  .contact-section .contact-block .contact-button p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 71px;
+  }
+}
+
+footer {
+  background-color: #EDF2FB;
+}
+footer .footer-block {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 41px;
+}
+@media screen and (min-width: 767px) {
+  footer .footer-block {
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: normal;
+    padding-top: 30px;
+    padding-bottom: 0px;
+    padding-left: 11px;
+  }
+}
+footer .footer-block .footer-logo {
+  width: 161px;
+  height: 100px;
+  background-color: #023059;
+  padding-top: 20px;
+}
+footer .footer-block .footer-logo img {
+  margin: 0 auto;
+}
+footer .footer-block .footer-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 26px;
+  color: #121212;
+  margin-top: 22px;
+  padding: 0 20px;
+}
+@media screen and (min-width: 767px) {
+  footer .footer-block .footer-text {
+    font-size: 0.875rem;
+    margin-top: 40px;
+    padding: 0 25px;
+  }
+}
+footer .footer-list {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 21px;
+  margin-top: 56px;
+}
+footer .footer-list li {
+  margin-left: 21px;
+  padding-right: 50px;
+}
+footer .footer-end {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 21px;
+  color: #121212;
+  box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.15);
+  padding-top: 27px;
+}
+@media screen and (min-width: 767px) {
+  footer .footer-end {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 0px;
+    height: 80px;
+    margin-right: 61px;
+  }
+}
+@media screen and (min-width: 767px) {
+  footer .footer-end li {
+    padding-right: 56px;
+  }
+}
+footer .footer-tel {
+  margin-top: 38px;
+  width: 100%;
+  height: 55px;
+  background-color: #023059;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-tel p {
+  margin-left: 7px;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #EDF2FB;
+}
+footer .footer-tel p span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #EDF2FB;
+}/*# sourceMappingURL=event_style.css.map */

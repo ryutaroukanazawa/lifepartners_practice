@@ -1,0 +1,846 @@
+@charset "UTF-8";
+
+/*
+===============
+GOOGLE FONTS
+===============
+*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/*
+===============
+VARIABLES CSS
+===============
+*/
+  $header-height: 2rem;
+
+/*
+===============
+COLORS
+===============
+*/
+
+  $black-color: #121212;;
+  $white-color: #FFFFFF;
+  $first-color: #EDF2FB;;
+  $second-color: #023059;;
+  $third-color: #837349;
+
+/*
+===============
+FONT AND SIZE
+===============
+*/
+  $main-font: 'Noto Sans JP', sans-serif;
+  $sub-font1: 'Zen Kaku Gothic New', sans-serif;
+  $sub-font2: 'Poppins', sans-serif;
+
+  // 100px
+  $font-size1: 6.25rem;
+  // 24px
+  $font-size2: 1.5rem;
+  // 16px
+  $font-size3: 1rem;
+  // 14px
+  $font-size4: 0.875rem;
+  // 12px
+  $font-size5: 0.75rem;
+
+/*
+===============
+FONT WEIGHT
+===============
+*/
+  $font-medium: 400;
+  $font-bold: 700;
+
+/*
+===============
+TRANSITION
+===============
+*/
+
+  $transition: all 0.3s linear;
+
+/*
+===============
+SPACING
+===============
+*/
+
+  $spacing: 0.25rem;
+
+/*
+===============
+HOVER OVERLAY
+===============
+*/
+
+  // $img-transition: ;
+  // $img-hidden: hidden;
+  // $img-scale: ;
+
+// @media screen and (min-width: 968px) {
+//   :root {
+//     --biggest-font-size: 4rem;
+//     --h1-font-size: 2.25rem;
+//     --h2-font-size: 1.75rem;
+//     --h3-font-size: 1.25rem;
+//     --normal-font-size: 1rem;
+//   }
+// }
+
+/*
+===============
+Responsive Desine
+===============
+*/
+    $pc: 767px;
+
+    @mixin pc {
+        @media screen and (min-width: $pc) {
+            @content;
+        }
+    } 
+
+    .sp { display: block !important; }
+    .pc { display: none !important; }
+
+@media only screen and (min-width: 767px) {
+    .sp { display: none !important; }
+    .pc { display: block !important; }
+}
+
+/*
+===============
+body
+===============
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: $main-font;
+    font-weight: $font-medium;
+    font-style: normal;
+    /* font-family: 'Poppins', sans-serif;
+    font-family: 'Zen Kaku Gothic New', sans-serif; */
+}
+
+.wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* common */
+.big-title {
+    display: block;
+    font-family: $sub-font1;
+    font-size: 50px;
+    font-weight: $font-bold;
+    line-height: 48px;
+    background-color: #1e588b;
+    background-image: url(../img/service/thirdimg-pc.png);
+    background-clip: text;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: transparent;
+
+    @include pc {
+        font-size: $font-size1;
+        font-weight: $font-bold;
+        line-height: 90px;
+    }
+}
+
+.large-text {
+    font-size: $font-size3;
+    font-weight: $font-bold;
+    line-height: 48px;
+    margin-left: 5px;
+    color: $black-color;
+    text-align: center;
+
+    @include pc {
+        font-size: $font-size2;
+        font-weight: $font-bold;
+        line-height: 90px;
+        margin-left: 10px;
+    }
+}
+
+.contents-text {
+    width: auto;
+    font-size: $font-size5;
+    margin: 0 5px;
+}
+
+// .section-subtitle {
+//     text-align: center;
+//     margin-top: 80px;
+//     font-size: 24px;
+//     font-weight: 700;
+//     line-height: 48px;
+// }
+
+// header
+header {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+
+    .header-block {
+        display: flex;
+        
+        h1 {
+            margin-top: 24px;
+            margin-left: 9px;
+            @include pc {
+                margin-top: 20px;
+                margin-left: 30px;
+            }
+        }
+
+        nav {
+            display: flex;
+            margin-left: auto;
+            margin-right: 9px;
+            @include pc {
+                margin-right: 49px;
+            }
+
+            img {
+                width: 18px;
+                height: 18px;
+                margin-top: 60px;
+                
+            }
+
+            p {
+                // width: 100%;
+                margin-top: 33px;
+                margin-left: 12px;
+                margin-right: 87px;
+                text-align: center;
+                font-size: $font-size4;
+                color: $white-color;
+
+                span {
+                    display: block;
+                    margin-top: 5px;
+                    font-size: $font-size2;
+                }
+            }
+
+            /* ハンバーガーメニュー */
+            .menu-btn {
+                margin-top: 31px;
+                width: 34.86px;
+                @include pc {
+                    margin-top: 54px;
+                    width: 60px;
+                }
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                span {
+                    content: '';
+                    display: block;
+                    height: 1px;
+                    width: 34.86px;
+                    @include pc {
+                        width: 60px;
+                    }
+                    background-color: $black-color;
+                    position: absolute;
+                }
+
+                span:after {
+                    content: '';
+                    display: block;
+                    height: 1px;
+                    width: 29.05px;
+                    @include pc {
+                        width: 50px;
+                    }
+                    background-color: $black-color;
+                    position: absolute;
+                }
+                
+                span:after {
+                    top: 10px;
+                    right: 13.95px;
+                    @include pc {
+                        right: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* mainvisual */
+.mainvisual-section {
+    position: relative;
+    width: 100%;
+    height: 550px;
+    background-image: url(../img/service/topimg-sp.png);
+    @include pc {
+        height: 650px;
+        background-image: url(../img/service/topimg-pc.png);
+    }
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .background-top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 550px;
+        @include pc {
+            height: 650px;
+        }
+        width: 100%;
+        text-align: center;
+        background-color: rgba(2, 48, 89, 0.6);
+        
+
+        .mainvisual-class1 {
+            margin-top: 247px;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+
+            .toptitle {
+                font-family: $sub-font1;
+                font-size: $font-size2;
+                @include pc {
+                    font-size: $font-size1;
+                }
+                font-weight: $font-bold;
+                color: $white-color;
+            }
+
+            .smalltitle {
+                margin-top: 10px;
+                font-size: $font-size3;
+                font-weight: $font-bold;
+                color: white;
+            }
+        }
+
+        .left-border {
+            width: 33%;
+            height: 1px;
+            border-bottom: 1px solid $white-color;
+            position: absolute;
+            top: 50%;
+            left: 0;
+        }
+
+        .right-border {
+            width: 1px;
+            height: 35%;
+            border-left: 1px solid $white-color;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+        }
+    }
+}
+
+/* ssection2 */
+.section2 {
+    width: 100%;
+    height: 338px;
+    background-image: url(../img/service/secondimg-sp.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: $font-size4;
+    font-weight: $font-medium;
+
+    @include pc {
+        height: 300px;
+        background-image: url(../img/service/secondimg-pc.jpg);
+        font-size: $font-size3;
+    }
+
+    .section2-text {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        color: $black-color;
+        padding: 10px 0;
+        line-height: 36px;
+        white-space: nowrap;
+
+        @include pc {
+            padding: 60px 0;
+            line-height: 36px;
+        }
+    }
+}
+
+// section3
+.section3 {
+    width: 100%;
+    margin-top: 50px;
+
+    .section3-box {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+
+        @include pc {
+            flex-flow: row;
+        }
+
+        .section3-img {
+            margin-top: 16px;
+            padding: 0 30px;
+        }
+
+        h3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: $font-size3;
+            font-weight: $font-medium;
+            color: $black-color;
+            line-height: 48px;
+
+            .section3-name {
+                margin-left: 14px;
+                font-weight: $font-bold;
+                border-bottom: 1px solid $black-color;
+
+                @include pc {
+                    font-size: $font-size2;
+                }
+            }
+        }
+
+        .section3-maintext {
+            margin-top: 30px;
+            text-align: center;
+            font-size: $font-size4;
+            font-weight: $font-medium;
+            color: $black-color;
+            line-height: 30px;
+            white-space: nowrap;
+
+            @include pc {
+                font-size: $font-size3;
+                line-height: 46.5px;
+                padding: 0 10px;
+            }
+        }
+    }
+}
+
+// section4
+.section4 {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 50px;
+    background-color: $first-color;
+
+    h2 {
+        text-align: center;
+        font-size: $font-size2;
+        font-weight: $font-bold;
+        line-height: 36px;
+        color: $black-color;
+        padding-top: 15px;
+    }
+
+    .section4-maintext {
+        font-size: $font-size4;
+        font-weight: $font-medium;
+        line-height: 20px;
+        color: $black-color;
+        padding-left: 15px;
+        padding-bottom: 30px;
+
+        @include pc {
+            padding-left: 105px;
+            padding-bottom: 50px;
+        }
+
+        p {
+            margin-top: 20px;
+        }
+    }
+}
+
+// section5
+.section5 {
+    width: 100%;
+    margin-top: 69px;
+
+    @include pc {
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 41px;
+    }
+
+    .section5-button {
+        width: 150px;
+        height: 50px;
+        margin-left: 12px;
+        text-align: center;
+        font-size: $font-size4;
+        font-weight: $font-medium;
+        color: $white-color;
+        background-color: $second-color;
+
+        p {
+            line-height: 50px;
+        }
+    }
+
+    ul {
+        display: list-item;
+        font-size: $font-size4;
+        font-weight: $font-medium;
+        color: $black-color;
+        line-height: 20px;
+        margin-top: 15px;
+        margin-left: 12px;
+        
+        li {
+            display: flex;
+            flex-flow: column;
+            list-style: disc;
+            margin-bottom: 22px;
+
+            @include pc {
+                flex-flow: row;
+            }
+
+            a {
+                padding-left: 16px;
+            }
+
+        }
+    }
+}
+
+// section6
+.section6 {
+    width: 100%;
+    margin-top: 50px;
+
+    @include pc {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    .company-table {
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 30px;
+        position: relative;
+
+        @include pc {
+            width: 1099px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            margin-top: 80px;
+            position: relative;
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        table {
+            width: 100%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            text-align: center;
+
+            @include pc {
+                width: 1099px;
+                height: 460px;
+            }
+
+            tr {
+                font-size: $font-size4;
+                line-height: 20px;  
+            }
+
+            th {
+                display: block;
+                font-size: $font-size4;
+                font-weight: $font-bold;
+                line-height: 20px;
+                text-align: center;
+                border: 1px solid #CDCEC6;
+                padding: 22.5px 0;
+                width: 100%;
+                background-color: $first-color;
+
+                @include pc {
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 36px;
+                    text-align: center;
+                    border: 1px solid #CDCEC6;
+                    padding: 22.5px 0;
+                    width: 205px;
+                    background-color: initial;
+                }
+            }
+
+            td {
+                display: block;
+                font-weight: $font-medium;
+                text-align: left;
+                border: 1px solid #CDCEC6;
+                padding: 22.5px 0;
+                padding-left: 11px;
+                width: 100%;
+
+                @include pc {
+                    display: table-cell;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 36px;
+                    text-align: left;
+                    border: 1px solid #CDCEC6;
+                    padding: 22.5px 0;
+                    padding-left: 34px;
+                    width: 894px;
+                }
+            }
+        }
+    }
+}
+
+
+// CONTACT
+.contact-section {
+    margin-top: 50px;
+
+    @include pc {
+        margin-top: 63px;
+    }
+
+    .large-text {
+        line-height: 20px;
+
+        @include pc {
+            line-height: 48px;
+        }
+    }
+
+    .contact-block {
+        width: 100%;
+        height: 160px;
+        margin: 0 auto;
+        margin-top: 15px;
+        text-align: center;
+        background-color: $second-color;
+
+        @include pc {
+            width: 1000px;
+            height: 298px;
+            margin: 0 auto;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .contact-text {
+            display: inline-block;
+            text-align: left;
+            padding-top: 10px;
+            font-size: $font-size5;
+            font-weight: $font-medium;
+            line-height: 25px;
+            color: $white-color;
+
+            @include pc {
+                padding-top: 70px;
+                font-size: $font-size3;
+                font-weight: $font-medium;
+            }
+        }
+
+        .contact-button {
+            margin: 0 auto;
+            margin-top: 16px;
+            width: 181px;
+            height: 30px;
+            background-color: $white-color;
+
+            @include pc {
+                margin-top: 60px;
+                width: 482px;
+                height: 71px;
+            }
+            
+            p {
+                font-size: $font-size5;
+                font-weight: $font-medium;
+                line-height: 30px;
+
+                @include pc {
+                    font-size: $font-size2;
+                    font-weight: $font-medium;
+                    line-height: 71px;
+                }
+            }
+        }
+    }
+}
+
+// フッター
+footer {
+    background-color: $first-color;
+    padding-bottom: 88px;
+
+    .footer-block {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        padding-top: 15px;
+        padding-bottom: 41px;
+        text-align: center;
+
+        @include pc {
+            flex-flow: row;
+            justify-content: flex-start;
+            align-items: normal;
+            padding-top: 30px;
+            padding-bottom: 0px;
+            padding-left: 11px;
+        }
+
+        .footer-logo {
+            width: 161px;
+            height: 100px;
+            background-color: #023059;
+            padding-top: 20px;
+            margin-left: 8px;
+
+            img {
+                margin: 0 auto;
+            }
+        }
+
+        .footer-text {
+            width: auto;
+            text-align: left;
+            font-family: $sub-font2;
+            font-size: $font-size5;
+            font-weight: $font-medium;
+            line-height: 26px;
+            color: $black-color;
+            margin-top: 22px;
+            padding: 0 20px;
+
+            @include pc {
+                font-size: $font-size4;
+                margin-top: 40px;
+                padding: 0 25px;
+            }
+        }
+    }
+
+    .footer-list {
+        display: flex;
+        font-family: $sub-font2;
+        font-size: $font-size5;
+        font-weight: $font-medium;
+        line-height: 21px;
+        margin-top: 56px;
+
+        li {
+            margin-left: 21px;
+            padding-right: 50px;
+            
+        }
+
+    }
+
+    .footer-end {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        font-family: $sub-font2;
+        font-size: $font-size5;
+        font-weight: $font-medium;
+        line-height: 21px;
+        color: $black-color;
+        box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.15);
+        padding-top: 27px;
+
+        @include pc {
+            width: 100%;
+            display: flex;
+            flex-flow: row;
+            justify-content: flex-end;
+            align-items: center;
+            padding-top: 0px;
+            height: 80px;
+            margin-right: 61px;
+        }
+
+        li {
+            @include pc {
+                padding-right: 56px;
+            }
+        }
+    }
+
+    .footer-tel {
+        margin-top: 38px;
+        width: 100%;
+        height: 55px;
+        background-color: $second-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        p {
+            margin-left: 7px;
+            font-size: $font-size5;
+            font-weight: $font-medium;
+            color: $first-color;
+            
+            span {
+                font-size: $font-size3;
+                font-weight: $font-medium;
+                color: $first-color;
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,92 @@
+/*
+===============
+GOOGLE FONTS
+===============
+*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/*
+===============
+VARIABLES CSS
+===============
+*/
+  $header-height: 2rem;
+
+/*
+===============
+COLORS
+===============
+*/
+
+  $black-color: #121212;;
+  $white-color: #FFFFFF;
+  $first-color: #EDF2FB;;
+  $second-color: #023059;;
+  $third-color: #837349;
+
+/*
+===============
+FONT AND SIZE
+===============
+*/
+  $main-font: 'Noto Sans JP', sans-serif;
+  $sub-font1: 'Zen Kaku Gothic New', sans-serif;
+  $sub-font2: 'Poppins', sans-serif;
+
+  // 100px
+  $font-size1: 6.25rem;
+  // 24px
+  $font-size2: 1.5rem;
+  // 16px
+  $font-size3: 1rem;
+  // 14px
+  $font-size4: 0.875rem;
+
+/*
+===============
+FONT WEIGHT
+===============
+*/
+  $font-medium: 400;
+  $font-bold: 700;
+
+/*
+===============
+TRANSITION
+===============
+*/
+
+  $transition: all 0.3s linear;
+
+/*
+===============
+SPACING
+===============
+*/
+
+  $spacing: 0.25rem;
+
+/*
+===============
+HOVER OVERLAY
+===============
+*/
+
+  // $img-transition: ;
+  // $img-hidden: hidden;
+  // $img-scale: ;
+
+// @media screen and (min-width: 968px) {
+//   :root {
+//     --biggest-font-size: 4rem;
+//     --h1-font-size: 2.25rem;
+//     --h2-font-size: 1.75rem;
+//     --h3-font-size: 1.25rem;
+//     --normal-font-size: 1rem;
+//   }
+// }
+
